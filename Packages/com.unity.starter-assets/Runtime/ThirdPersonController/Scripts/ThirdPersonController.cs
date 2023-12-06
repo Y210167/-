@@ -348,6 +348,20 @@ namespace StarterAssets
             }
         }
 
+        public void OnTriggerEnter(Collider other)
+        {
+            if (other.gameObject.CompareTag("jump"))
+            {
+                _verticalVelocity = Mathf.Sqrt(JumpHeight * -4f * Gravity);
+
+                // update animator if using character
+                if (_hasAnimator)
+                {
+                    _animator.SetBool(_animIDJump, true);
+                }
+            }
+        }
+
         private static float ClampAngle(float lfAngle, float lfMin, float lfMax)
         {
             if (lfAngle < -360f) lfAngle += 360f;

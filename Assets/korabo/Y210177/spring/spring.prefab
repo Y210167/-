@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: 158139864496043455}
   m_Layer: 0
   m_Name: spring
-  m_TagString: A
+  m_TagString: jump
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
