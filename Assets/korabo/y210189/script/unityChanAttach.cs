@@ -7,6 +7,7 @@ public class unityChanAttach : MonoBehaviour
    // public GameObject RootObject;
    bool Flag = false;
    private CharacterController characterController;
+   Vector3 currentPosition;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,15 +19,16 @@ public class unityChanAttach : MonoBehaviour
     {
         if(Input.GetAxis("Horizontal")!=0 || Input.GetAxis("Vertical")!=0 || Input.GetKey("space"))
         {
+            currentPosition = transform.localPosition;
             Flag = false;
         }
     }
 
     void FixedUpdate()
     {
-        if(Flag){
-            characterController.center = new Vector3(0, 0.9f, 0);
-            characterController.transform.localPosition = new Vector3(0,0.9f,0);
+        if(Flag){  
+            currentPosition.y = transform.localPosition.y;
+            characterController.transform.localPosition = currentPosition;
         }
     }
 
@@ -35,11 +37,12 @@ public class unityChanAttach : MonoBehaviour
         // 衝突したオブジェクトのタグが "Player" と一致するかを確認
         if ((other.CompareTag("move_floor_side")) && (Input.GetAxis("Horizontal")==0 && Input.GetAxis("Vertical")==0)){
             Debug.Log(other);
-            Flag = true;
             this.gameObject.transform.parent = other.gameObject.transform;
-            //characterController.center = new Vector3(0, 1, 0);
+            currentPosition = transform.localPosition;
+            Flag = true;
+            
+           
         }
-        
     }
 
     void OnTriggerExit(Collider other)
