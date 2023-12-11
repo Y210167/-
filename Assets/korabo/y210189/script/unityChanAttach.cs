@@ -8,7 +8,7 @@ public class unityChanAttach : MonoBehaviour
    bool Flag = false;
    private CharacterController characterController;
    Vector3 currentPosition;
-   public float adjust=0.0f;
+   public float adjust=0.3f;
     // Start is called before the first frame update
     void Start()
     {
