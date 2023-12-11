@@ -18,7 +18,11 @@ public class unityChanAttach : MonoBehaviour
     {
         if(Flag)
         {
+            Debug.Log("a");
             characterController.center = new Vector3(0,0.9f,0);
+            ///Vector3 localMove = Vector3.zero;
+            //characterController.Move(transform.TransformVector(localMove) * Time.deltaTime);
+            //characterController.transform.localPosition = new Vector3(0,0.9f,0);
         }
     }
 
