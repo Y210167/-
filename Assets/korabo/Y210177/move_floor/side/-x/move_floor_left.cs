@@ -5,7 +5,7 @@ using UnityEngine;
 public class move_floor_left : MonoBehaviour
 {
     public float length = 2f;
-
+    public GameObject RootObject;
     private Rigidbody rb;
     private Vector3 Pos;
 

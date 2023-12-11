@@ -9,9 +9,10 @@ public class move_floor_up : MonoBehaviour
 
     private Rigidbody rb;
     private Vector3 Pos;
+ 
 
     private void Start()
-    {
+    {  
         rb = GetComponent<Rigidbody>();
         Pos = transform.position;
     }
