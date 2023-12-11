@@ -16,20 +16,24 @@ public class unityChanAttach : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Flag)
+        if(Input.GetAxis("Horizontal")!=0 || Input.GetAxis("Vertical")!=0 || Input.GetKey("space"))
         {
-            Debug.Log("a");
-            characterController.center = new Vector3(0,0.9f,0);
-            ///Vector3 localMove = Vector3.zero;
-            //characterController.Move(transform.TransformVector(localMove) * Time.deltaTime);
-            //characterController.transform.localPosition = new Vector3(0,0.9f,0);
+            Flag = false;
         }
     }
 
-    void OnTriggerEnter(Collider other)
+    void FixedUpdate()
+    {
+        if(Flag){
+            characterController.center = new Vector3(0, 0.9f, 0);
+            characterController.transform.localPosition = new Vector3(0,0.9f,0);
+        }
+    }
+
+    void OnTriggerStay(Collider other)
     {
         // 衝突したオブジェクトのタグが "Player" と一致するかを確認
-        if (other.CompareTag("move_floor_side")){
+        if ((other.CompareTag("move_floor_side")) && (Input.GetAxis("Horizontal")==0 && Input.GetAxis("Vertical")==0)){
             Debug.Log(other);
             Flag = true;
             this.gameObject.transform.parent = other.gameObject.transform;
