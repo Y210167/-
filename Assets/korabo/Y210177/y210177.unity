@@ -4101,7 +4101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 529752a288c0a1441a428ff24269acea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  next: SampleScene
+  next: y210
   now: y210177
   UI: {fileID: 2132597919}
 --- !u!1001 &1458945045
