@@ -20,6 +20,7 @@ TagManager:
   - kaiten_x_minus
   - kaiten_y_minus
   - kaiten_z_minus
+  - save_1
   layers:
   - Default
   - TransparentFX
