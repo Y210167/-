@@ -8,6 +8,7 @@ public class unityChanAttach : MonoBehaviour
    bool Flag = false;
    private CharacterController characterController;
    Vector3 currentPosition;
+   public float adjust=0.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +28,7 @@ public class unityChanAttach : MonoBehaviour
     void FixedUpdate()
     {
         if(Flag){  
-            currentPosition.y = transform.localPosition.y;
+            currentPosition.y = transform.localPosition.y-adjust;
             characterController.transform.localPosition = currentPosition;
         }
     }
