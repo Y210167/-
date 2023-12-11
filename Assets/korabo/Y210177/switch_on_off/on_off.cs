@@ -7,6 +7,10 @@ public class on_off : MonoBehaviour
     public bool sw = true;
     public bool set = false;
 
+    public void Start()
+    {
+        
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -45,7 +49,7 @@ public class on_off : MonoBehaviour
         if (set)
         {
             // ON‚ÌŽž
-            if (sw)
+            if (!sw)
             {
                 GameObject[] skeleton_ON = GameObject.FindGameObjectsWithTag("skeleton_ON");
                 foreach (GameObject s_on in skeleton_ON)
@@ -66,7 +70,7 @@ public class on_off : MonoBehaviour
 
             }
             // OFF‚ÌŽž
-            if (!sw)
+            if (sw)
             {
                 GameObject[] skeleton_ON = GameObject.FindGameObjectsWithTag("skeleton_ON");
                 foreach (GameObject s_on in skeleton_ON)
