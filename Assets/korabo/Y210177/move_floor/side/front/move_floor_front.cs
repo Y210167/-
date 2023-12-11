@@ -17,6 +17,6 @@ public class move_floor_front : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.MovePosition(new Vector3(Pos.x, Pos.y + Mathf.PingPong(Time.time, length), Pos.z + Mathf.PingPong(Time.time, length)));
+        rb.MovePosition(new Vector3(Pos.x, Pos.y, Pos.z + Mathf.PingPong(Time.time, length)));
     }
 }

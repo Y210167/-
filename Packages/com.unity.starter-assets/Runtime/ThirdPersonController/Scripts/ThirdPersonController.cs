@@ -98,6 +98,8 @@ namespace StarterAssets
         private int _animIDFreeFall;
         private int _animIDMotionSpeed;
 
+        public float spring = 3f;
+
 #if ENABLE_INPUT_SYSTEM 
         private PlayerInput _playerInput;
 #endif
@@ -348,11 +350,15 @@ namespace StarterAssets
             }
         }
 
-        public void OnTriggerEnter(Collider other)
+        private void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.CompareTag("jump"))
+
+            // 当たった相手のタグがPlayerだった場合
+            if (other.gameObject.CompareTag("Jump"))
             {
-                _verticalVelocity = Mathf.Sqrt(JumpHeight * -4f * Gravity);
+                Debug.Log("ジャンプ");
+                // 当たった相手のRigidbodyコンポーネントを取得して、上向きの力を加える
+                _verticalVelocity = Mathf.Sqrt(JumpHeight * spring * -2 * Gravity);
 
                 // update animator if using character
                 if (_hasAnimator)
@@ -360,6 +366,7 @@ namespace StarterAssets
                     _animator.SetBool(_animIDJump, true);
                 }
             }
+
         }
 
         private static float ClampAngle(float lfAngle, float lfMin, float lfMax)
