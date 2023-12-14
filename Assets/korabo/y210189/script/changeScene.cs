@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class changeScene : MonoBehaviour
 {
-    public string next,now;
+    public string next,now,start;
     public GameObject UI;
     private bool clear = false;
     
@@ -33,6 +33,10 @@ public class changeScene : MonoBehaviour
                 sceneNext();
             }
         }
+        if(Input.GetKey(KeyCode.S) && SceneManager.GetActiveScene().name == "startScene")
+            {
+                sceneStart();
+            }
     }
 
     void OnTriggerEnter(Collider other)
@@ -50,5 +54,10 @@ public class changeScene : MonoBehaviour
     public void sceneNow()
     {
         SceneManager.LoadScene(now);
+    }
+
+    public void sceneStart()
+    {
+        SceneManager.LoadScene(start);
     }
 }

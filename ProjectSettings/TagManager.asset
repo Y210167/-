@@ -7,6 +7,20 @@ TagManager:
   - CinemachineTarget
   - A
   - jump
+  - skeleton_ON
+  - move_floor_side
+  - dorop_floor
+  - skeleton_OFF
+  - Jump
+  - Switch
+  - move_floor
+  - kaiten_x
+  - kaiten_y
+  - kaiten_z
+  - kaiten_x_minus
+  - kaiten_y_minus
+  - kaiten_z_minus
+  - save_1
   layers:
   - Default
   - TransparentFX
