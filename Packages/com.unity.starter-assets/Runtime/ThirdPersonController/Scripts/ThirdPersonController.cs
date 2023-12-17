@@ -124,7 +124,7 @@ namespace StarterAssets
             }
         }
 
-
+        private bool isOnLadder = false;
         private void Awake()
         {
             // get a reference to our main camera
@@ -161,6 +161,7 @@ namespace StarterAssets
             JumpAndGravity();
             GroundedCheck();
             Move();
+            ladderMove();
         }
 
         private void LateUpdate()
@@ -350,6 +351,8 @@ namespace StarterAssets
             }
         }
 
+        public float tmpGravity = -15.0f;
+        public float climbSpeed = 2.5f;
         private void OnTriggerEnter(Collider other)
         {
 
@@ -366,10 +369,43 @@ namespace StarterAssets
                     _animator.SetBool(_animIDJump, true);
                 }
             }
+        }    
+    
+    void ladderMove()
+    {
+        if (isOnLadder)
+            {
+                //Debug.Log("a");
+                // 上下の入力を取得
+                if(Input.GetKey(KeyCode.L)){
+                    // 移動ベクトルの作成（上方向に移動）
+                    Vector3 moveDirection = new Vector3(0, climbSpeed, 0);
+                    moveDirection = transform.TransformDirection(moveDirection);
+    
+                    // 梯子の上昇
+                    _controller.Move(moveDirection * climbSpeed * Time.deltaTime);
+                }
+            }
+    }
 
+    void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("ladder"))// 梯子に触れたときに呼ばれるメソッド
+            {
+                isOnLadder = true;
+                Gravity = 0.0f;
+            }
+    }
+
+    // 梯子から離れたときに呼ばれるメソッド
+    void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("ladder"))
+        {
+            isOnLadder = false;
+            Gravity = tmpGravity;
         }
-
-        
+    }        
 
         private static float ClampAngle(float lfAngle, float lfMin, float lfMax)
         {

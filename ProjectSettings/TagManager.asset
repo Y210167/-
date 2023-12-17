@@ -21,6 +21,8 @@ TagManager:
   - kaiten_y_minus
   - kaiten_z_minus
   - save_1
+  - save_point
+  - ladder
   layers:
   - Default
   - TransparentFX
