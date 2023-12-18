@@ -31,12 +31,14 @@ public class kirikae_floor : MonoBehaviour
         {
             originColor_b = k_b.GetComponent<Renderer>().material.color;
         }
+        originColor_a.a /= 2;
         originColor_a_h = originColor_a;
-        originColor_a_h.a /= 2;
 
+        originColor_b.a /= 2;
         originColor_b_h = originColor_b;
-        originColor_b_h.a /= 2;
 
+        originColor_a.a *= 2;
+        originColor_b.a *= 2;
         foreach (GameObject k_b in kirikae_b)
         {
             k_b.GetComponent<Renderer>().material.color = originColor_b_h;
@@ -134,6 +136,7 @@ public class kirikae_floor : MonoBehaviour
                     Collider k_b_collider = k_b.GetComponent<Collider>();
                     k_b_collider.enabled = true;
                 }
+                originColor_a.a *= 2;
                 kurikaesi = false;
                 _timeElapsed = 0;
                 Debug.Log("1");
@@ -149,10 +152,12 @@ public class kirikae_floor : MonoBehaviour
                 }
                 foreach (GameObject k_b in kirikae_b)
                 {
+                    originColor_b.a /= 2;
                     k_b.GetComponent<Renderer>().material.color = originColor_b_h;
                     Collider k_b_collider = k_b.GetComponent<Collider>();
                     k_b_collider.enabled = false;
                 }
+                originColor_b.a *= 2;
                 kurikaesi = true;
                 _timeElapsed = 0;
                 Debug.Log("2");
