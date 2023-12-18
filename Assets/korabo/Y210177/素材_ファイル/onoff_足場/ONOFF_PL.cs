@@ -2,15 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class on_off : MonoBehaviour
+public class ONOFF_PL : MonoBehaviour
 {
     public bool sw = true;
-    public bool set = true;
-
-    public void Start()
-    {
-        
-    }
+    public bool set = false;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -19,26 +14,14 @@ public class on_off : MonoBehaviour
         {
             if (!sw)
             {
-                GameObject[] Switch = GameObject.FindGameObjectsWithTag("Switch");
-                Debug.Log("ON");
-                foreach (GameObject playerObject in Switch)
-                {
-                    playerObject.GetComponent<Renderer>().material.color = Color.red;
-                    playerObject.transform.rotation = Quaternion.identity;
-                }
+                
                 set = true;
                 sw = true;
                 return;
             }
             if (sw)
             {
-                GameObject[] Switch = GameObject.FindGameObjectsWithTag("Switch");
-                Debug.Log("OFF");
-                foreach (GameObject playerObject in Switch)
-                {
-                    playerObject.GetComponent<Renderer>().material.color = Color.blue;
-                    playerObject.transform.rotation = Quaternion.Euler(0, 180, 0);
-                }
+                
                 set = true;
                 sw = false;
             }
@@ -92,6 +75,6 @@ public class on_off : MonoBehaviour
             }
             set = false;
         }
-        
+
     }
 }

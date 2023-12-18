@@ -22,7 +22,13 @@ TagManager:
   - kaiten_z_minus
   - save_1
   - save_point
+<<<<<<< HEAD
   - ladder
+=======
+  - kirikae_a
+  - kirikae_b
+  - goal
+>>>>>>> 4411c71ea02295f5016fd7421d7141e61a842d08
   layers:
   - Default
   - TransparentFX
