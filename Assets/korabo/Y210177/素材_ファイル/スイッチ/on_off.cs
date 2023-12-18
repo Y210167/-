@@ -5,7 +5,7 @@ using UnityEngine;
 public class on_off : MonoBehaviour
 {
     public bool sw = true;
-    public bool set = false;
+    public bool set = true;
 
     public void Start()
     {
