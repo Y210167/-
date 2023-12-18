@@ -17,4 +17,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/korabo/Y210177/y210177.unity
     guid: 3aa3cd41e05f4dd41b8bfbe812255e9d
+  - enabled: 1
+    path: Assets/korabo/Y210167/home.unity
+    guid: c0dfdab540dcd3742a895d9d71e835fd
+  - enabled: 1
+    path: Assets/korabo/Y210167/ex.unity
+    guid: 5d57f4c11c29f39428a384e44eba7264
+  - enabled: 1
+    path: Assets/korabo/Y210167/main1.unity
+    guid: 195ce2bbf1989a645844f05f28ef0a82
   m_configObjects: {}

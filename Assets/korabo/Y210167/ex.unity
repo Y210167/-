@@ -182,8 +182,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\n\r\n\u30DE\u30A6\u30B9\r\n\u30AB\u30FC\u30BD\u30EB:\u8996\u70B9\u79FB\u52D5\r\n\u53F3\u30AF\u30EA\u30C3\u30AF:\u30B9\u30ED\u30FC"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8034a30c76426d24ea4f394a00f060ac, type: 2}
-  m_sharedMaterial: {fileID: -4096279220427494172, guid: 8034a30c76426d24ea4f394a00f060ac, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 54e64014a882a2f4c9e4e2bfe492ec69, type: 2}
+  m_sharedMaterial: {fileID: -4096279220427494172, guid: 54e64014a882a2f4c9e4e2bfe492ec69, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -307,7 +307,6 @@ GameObject:
   - component: {fileID: 169758258}
   - component: {fileID: 169758257}
   - component: {fileID: 169758260}
-  - component: {fileID: 169758262}
   - component: {fileID: 169758261}
   m_Layer: 0
   m_Name: Main Camera
@@ -446,18 +445,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01622c58648e7254d9ab7bd80e7176b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &169758262
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 169758256}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62346f8129ef3d74bb9f23cfa1ef9886, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &211208857
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,10 +502,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u30AD\u30FC\u30DC\u30FC\u30C9\r\n\"w\"\u30FB\"s\":\u9032\u3080\u30FB\u623B\u308B\r\n\"a\"\u30FB\"d\":\u5DE6\u30FB\u53F3\r\n\"e\":\u30B9\u30BF\u30FC\u30C8\u753B\u9762\u306B\u623B\u308B\r\n\"t\":\u30C6\u30EC\u30DD\u30FC\u30C8\r\n\"space\":\u30B8\u30E3\u30F3\u30D7\r\n"
+  m_text: "\u30AD\u30FC\u30DC\u30FC\u30C9\r\n\"w\"\u30FB\"s\":\u9032\u3080\u30FB\u623B\u308B\r\n\"a\"\u30FB\"d\":\u5DE6\u30FB\u53F3\r\n\"e\":\u30B9\u30BF\u30FC\u30C8\u753B\u9762\u306B\u623B\u308B\r\n\"t\":\u30C6\u30EC\u30DD\u30FC\u30C8\r\n\"space\":\u30B8\u30E3\u30F3\u30D7\r\n\"F\":\u306F\u3057\u3054\u3092\u306E\u307C\u308B\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8034a30c76426d24ea4f394a00f060ac, type: 2}
-  m_sharedMaterial: {fileID: -4096279220427494172, guid: 8034a30c76426d24ea4f394a00f060ac, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 54e64014a882a2f4c9e4e2bfe492ec69, type: 2}
+  m_sharedMaterial: {fileID: -4096279220427494172, guid: 54e64014a882a2f4c9e4e2bfe492ec69, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -947,8 +934,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\n\"s\":\u30B2\u30FC\u30E0\u30B9\u30BF\u30FC\u30C8\u3000\"e\":\u30DB\u30FC\u30E0\u306B\u623B\u308B\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8034a30c76426d24ea4f394a00f060ac, type: 2}
-  m_sharedMaterial: {fileID: -4096279220427494172, guid: 8034a30c76426d24ea4f394a00f060ac, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 54e64014a882a2f4c9e4e2bfe492ec69, type: 2}
+  m_sharedMaterial: {fileID: -4096279220427494172, guid: 54e64014a882a2f4c9e4e2bfe492ec69, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
