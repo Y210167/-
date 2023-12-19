@@ -12,7 +12,7 @@ public class TP : MonoBehaviour
 
     void Start()
     {
-        // (0, 0, 0) (-13, 34, 18) (20, 50 ,24)
+        // (0, 0, 0) (-13, 34, 18) (20, 50 ,24) (6, 87, 48)
         controller = GetComponent<CharacterController>();
         warpPosition = new Vector3(0, 0, 0);
     }

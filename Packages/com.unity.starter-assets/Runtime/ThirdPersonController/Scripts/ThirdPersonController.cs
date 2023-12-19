@@ -377,7 +377,7 @@ namespace StarterAssets
             {
                 //Debug.Log("a");
                 // 上下の入力を取得
-                if(Input.GetKey(KeyCode.L)){
+                if(Input.GetKey(KeyCode.F)){
                     // 移動ベクトルの作成（上方向に移動）
                     Vector3 moveDirection = new Vector3(0, climbSpeed, 0);
                     moveDirection = transform.TransformDirection(moveDirection);
