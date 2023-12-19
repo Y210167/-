@@ -14,7 +14,7 @@ public class TP : MonoBehaviour
     {
         // (0, 0, 0) (-13, 34, 18) (20, 50 ,24) (6, 87, 48)
         controller = GetComponent<CharacterController>();
-        warpPosition = new Vector3(6, 87, 48);
+        warpPosition = new Vector3(0, 0, 0);
     }
     private void OnTriggerEnter(Collider other)
     {
