@@ -3,7 +3,19 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - skeleton_OFF
+  - Switch
+  - dorop_floor
+  - save_point
+  - move_floor
+  - skeleton_ON
+  - move_floor_side
+  - CinemachineTarget
+  - Jump
+  - ladder
+  - kirikae_b
+  - kirikae_a
   layers:
   - Default
   - TransparentFX
@@ -11,7 +23,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - NOGround
   - 
   - 
   - 
