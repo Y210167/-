@@ -15,7 +15,7 @@ public class change_main1 : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown("s")){
-		SceneManager.LoadScene("main1", LoadSceneMode.Single); 
+		SceneManager.LoadScene("y210", LoadSceneMode.Single); 
 	}
     }
 }
