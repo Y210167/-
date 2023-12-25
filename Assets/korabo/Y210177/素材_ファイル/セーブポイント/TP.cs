@@ -40,6 +40,12 @@ public class TP : MonoBehaviour
         if (isWarping)
         {
             controller.transform.position = warpPosition;
+            isWarping = false;
+        }
+
+        if(controller.transform.position.y < -30)
+        {
+            isWarping = true;
         }
     }
 }
